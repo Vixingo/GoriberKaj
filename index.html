@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav class="bg-[var(--color-primary)] text-white relative">
+      <div
+        class="hidden lg:flex justify-between border-b-2 border-[#4779CC] max-w-[1280px] mx-auto px-4"
+      >
+        <div class="flex gap-4 text-sm py-2">
+          <p class="flex gap-2">
+            <img src="img/phone.svg" alt="" />+90 212 451 49 00
+          </p>
+          <p class="flex gap-2">
+            <img src="img/email.svg" alt="" />ihlasvakfi@ihlasvakfi.org.tr
+          </p>
+        </div>
+        <div class="text-sm py-2 flex gap-2">
+          <img src="img/card.svg" alt="" />BANKA HESAP NUMARALARIMIZ.
+        </div>
+      </div>
+
+      <!-- Main navigation -->
+      <div class="max-w-[1280px] mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Desktop navigation links -->
+          <div class="hidden lg:flex gap-10 items-center">
+            <a href="" class="hover:text-[#4779CC] transition-colors"
+              >KURUMSAL</a
+            >
+            <a href="" class="hover:text-[#4779CC] transition-colors"
+              >FAALİYETLERİMİZ</a
+            >
+            <a href="" class="hover:text-[#4779CC] transition-colors"
+              >İLETİŞİM</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="lg:hidden flex flex-col gap-1 p-2 z-20"
+          >
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+          </button>
+
+          <!-- Desktop action buttons -->
+          <div class="hidden md:flex gap-2">
+            <button
+              class="flex gap-2 justify-center items-center bg-[var(--color-secondary)] p-3 rounded-xl"
+            >
+              <img
+                src="img/heart.svg"
+                class="w-7 border-r pr-2 border-[#4779CC]"
+                alt=""
+              />BAĞIŞ YAP
+            </button>
+            <button
+              class="flex gap-2 justify-center items-center bg-[#4779CC] p-3 rounded-xl"
+            >
+              <img
+                src="img/person.svg"
+                class="w-6 border-r pr-2 border-black"
+                alt=""
+              />GÖNÜLLÜ OL
+            </button>
+            <button class="flex gap-2 border-white border p-3 rounded-xl">
+              <img src="img/sunshine.svg" class="w-8" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu with smooth animations -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0"
+        >
+          <div class="flex flex-col gap-4 pb-4">
+            <a
+              href=""
+              class="hover:text-[#4779CC] py-2 border-b border-[#4779CC] transform translate-y-2 opacity-0 transition-all duration-300"
+              >KURUMSAL</a
+            >
+            <a
+              href=""
+              class="hover:text-[#4779CC] py-2 border-b border-[#4779CC] transform translate-y-2 opacity-0 transition-all duration-300 delay-75"
+              >FAALİYETLERİMİZ</a
+            >
+            <a
+              href=""
+              class="hover:text-[#4779CC] py-2 border-b border-[#4779CC] transform translate-y-2 opacity-0 transition-all duration-300 delay-150"
+              >İLETİŞİM</a
+            >
+            <div class="flex w-full justify-between">
+              <button
+                class="flex gap-2 justify-center items-center bg-[var(--color-secondary)] p-3 rounded-xl"
+              >
+                <img src="img/heart.svg" class="w-7" alt="" />BAĞIŞ YAP
+              </button>
+              <button
+                class="flex gap-2 justify-center items-center bg-[#4779CC] p-3 rounded-xl"
+              >
+                <img src="img/person.svg" class="w-5" alt="" />GÖNÜLLÜ OL
+              </button>
+              <button class="flex gap-2 border-white border p-3 rounded-xl">
+                <img src="img/sunshine.svg" class="w-8" alt="" />
+              </button>
+            </div>
+            <!-- Mobile contact info -->
+            <div
+              class="flex flex-col gap-2 mt-4 pt-4 border-t border-[#4779CC] text-sm transform translate-y-2 opacity-0 transition-all duration-300 delay-300"
+            >
+              <p class="flex gap-2">
+                <img src="img/phone.svg" alt="" />+90 212 451 49 00
+              </p>
+              <p class="flex gap-2">
+                <img src="img/email.svg" alt="" />ihlasvakfi@ihlasvakfi.org.tr
+              </p>
+              <div class="text-sm py-2 flex gap-2">
+                <img src="img/card.svg" alt="" />BANKA HESAP NUMARALARIMIZ.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Logo -->
+      <div
+        class="absolute -top-2 left-[50%] -translate-x-[50%] bg-white rounded-xl p-4 pt-7 hidden lg:block"
+      >
+        <img src="img/logo.svg" alt="Logo" />
+      </div>
+
+      <!-- Mobile logo -->
+      <div class="lg:hidden absolute top-2 right-4 bg-white rounded-lg p-2">
+        <img src="img/logo.svg" alt="Logo" class="h-8" />
+      </div>
+    </nav>
+
+    <main class="">
+      <section
+        class="bg-[url('/img/herobg.png')] bg-cover bg-no-repeat px-4 py-8"
+      >
+        <div
+          class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between"
+        >
+          <!-- Left Section -->
+          <div class="text-center md:text-left md:w-1/2 space-y-4">
+            <h2 class="text-xl md:text-5xl text-[#f49d1e] font-semibold">
+              Damlaya damlaya
+            </h2>
+            <h1 class="text-4xl md:text-7xl text-[#003E92] leading-tight">
+              GELECEK OLUR
+            </h1>
+            <button
+              class="border border-[#003E92] text-[#003E92] px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#003E92] hover:text-white transition"
+            >
+              DETAYLI BİLGİ
+            </button>
+
+            <!-- Carousel Controls -->
+            <div
+              class="flex items-center justify-center md:justify-start gap-4 mt-6"
+            >
+              <button
+                id="prevBtn"
+                class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-[#003E92]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <div class="flex items-center gap-2">
+                <span
+                  class="dot h-1 w-10 bg-[#003E92] rounded-full transition-all duration-300 cursor-pointer"
+                ></span>
+                <span
+                  class="dot h-1 w-6 bg-[#6b91bc] rounded-full transition-all duration-300 cursor-pointer"
+                ></span>
+                <span
+                  class="dot h-1 w-6 bg-[#6b91bc] rounded-full transition-all duration-300 cursor-pointer"
+                ></span>
+              </div>
+
+              <button
+                id="nextBtn"
+                class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-[#003E92]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="relative mt-8 md:mt-0 md:w-1/2 flex justify-center">
+            <div
+              class="relative w-[300px] h-[280px] md:w-[600px] md:h-[580px] overflow-hidden"
+            >
+              <div
+                id="carousel"
+                class="flex w-full h-full transition-transform duration-500"
+              >
+                <img
+                  src="/img/hero.png"
+                  alt="Hero Slide"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+                <img
+                  src="/img/hero.png"
+                  alt="Hero Slide 2"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+                <img
+                  src="/img/hero.png"
+                  alt="Hero Slide 3"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+              </div>
+            </div>
+
+            <!-- Bağış Yap Button -->
+            <button
+              class="absolute bottom-14 left-10 md:bottom-30 md:left-24 transform -translate-x-1/2 px-4 py-2 bg-[#f49d1e] text-white text-xs font-medium rounded shadow hover:bg-[#e38c0a] z-20"
+            >
+              BAĞIŞ YAP
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- circular image section -->
+      <section>
+        <div class="bg-white py-10 px-4 md:px-16">
+          <!-- Top circular images -->
+          <div class="flex justify-center space-x-4 overflow-x-auto pb-6">
+            <img
+              src="img/1.png"
+              alt="1"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/2.png"
+              alt="2"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/3.png"
+              alt="3"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/4.png"
+              alt="4"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/5.png"
+              alt="5"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/6.png"
+              alt="6"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+            <img
+              src="img/7.png"
+              alt="7"
+              class="w-16 h-16 rounded-full border-4 border-orange-400"
+            />
+          </div>
+
+          <!-- Main Donation Section -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-lg rounded-xl p-6"
+          >
+            <!-- Left image -->
+            <div class="">
+              <img
+                src="img/donate.png"
+                alt="Donation image"
+                class="rounded-lg w-full h-auto object-cover"
+              />
+            </div>
+
+            <!-- Right content -->
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-blue-800">Bağışçımız OLUN</h2>
+              <p class="text-gray-600 text-sm">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.
+              </p>
+
+              <!-- Category Icons -->
+              <div
+                class="flex flex-wrap gap-4 text-xs text-center text-gray-700"
+              >
+                <div class="flex flex-col items-center">
+                  <img src="kurban-icon.svg" class="w-6 h-6" />
+                  <span>KURBAN</span>
+                </div>
+                <div class="flex flex-col items-center text-orange-500">
+                  <img src="genel-icon.svg" class="w-6 h-6" />
+                  <span class="font-semibold">GENEL BAĞIŞ</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="su-icon.svg" class="w-6 h-6" />
+                  <span>SU KUYUSU</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="ramazan-icon.svg" class="w-6 h-6" />
+                  <span>RAMAZAN</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="zekat-icon.svg" class="w-6 h-6" />
+                  <span>ZEKAT</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="yetim-icon.svg" class="w-6 h-6" />
+                  <span>YETİM</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="burs-icon.svg" class="w-6 h-6" />
+                  <span>BURS</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img src="kitap-icon.svg" class="w-6 h-6" />
+                  <span>KİTAP</span>
+                </div>
+              </div>
+
+              <!-- Donation Amount Selector -->
+              <div class="space-y-2">
+                <label for="donation" class="text-sm font-medium"
+                  >BAĞIŞ SEÇİN</label
+                >
+                <div class="flex gap-2 flex-wrap">
+                  <button
+                    class="px-4 py-1 border border-gray-300 rounded-full text-sm hover:bg-blue-100"
+                  >
+                    25 TL
+                  </button>
+                  <button
+                    class="px-4 py-1 border border-gray-300 rounded-full text-sm hover:bg-blue-100"
+                  >
+                    50 TL
+                  </button>
+                  <button
+                    class="px-4 py-1 border border-gray-300 rounded-full text-sm hover:bg-blue-100"
+                  >
+                    75 TL
+                  </button>
+                  <button
+                    class="px-4 py-1 border border-gray-300 rounded-full text-sm hover:bg-blue-100"
+                  >
+                    100 TL
+                  </button>
+                  <input
+                    type="text"
+                    placeholder="Kendim Belirleyeceğim"
+                    class="px-3 py-1 border border-gray-300 rounded-full text-sm w-48"
+                  />
+                </div>
+              </div>
+
+              <!-- Donation Frequency -->
+              <div class="flex items-center gap-4 text-sm text-gray-700">
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="frequency"
+                    class="form-radio text-blue-500"
+                    checked
+                  />
+                  <span class="ml-2">Tek Seferlik Bağış</span>
+                </label>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="frequency"
+                    class="form-radio text-blue-500"
+                  />
+                  <span class="ml-2">Aylık Düzenli Bağış</span>
+                </label>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex gap-4">
+                <button
+                  class="bg-orange-400 hover:bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1"
+                >
+                  🧡 HIZLI BAĞIŞ YAP
+                </button>
+                <button
+                  class="border border-gray-400 text-gray-700 px-4 py-2 rounded-lg text-sm"
+                >
+                  SEPETE EKLE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 cards section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <!-- Section Header -->
+          <h3 class="text-lg text-yellow-500 font-semibold mb-2">
+            Birlikte yüzleri güldürelim
+          </h3>
+          <h2 class="text-3xl font-bold text-blue-900 mb-8">
+            Siz de Destek Olun
+          </h2>
+
+          <!-- Carousel Container -->
+          <div class="flex space-x-6 overflow-x-auto scrollbar-hide">
+            <!-- Card Start -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-6 w-[300px] flex-shrink-0"
+            >
+              <p class="text-sm text-yellow-500 font-semibold">Afrika</p>
+              <h3 class="text-xl font-bold text-blue-900 my-1">Cami İnşaatı</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s...
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-2">
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>%18</span>
+                </div>
+                <div class="w-full bg-gray-200 h-1 rounded">
+                  <div class="bg-orange-400 h-1 rounded w-[18%]"></div>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-600 mb-4">
+                1568 kişi bu projeyi destekledi.
+              </p>
+
+              <button
+                class="bg-white text-blue-700 border border-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded transition"
+              >
+                DESTEK OL
+              </button>
+            </div>
+            <!-- Repeat the card as needed -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-6 w-[300px] flex-shrink-0"
+            >
+              <p class="text-sm text-yellow-500 font-semibold">Afrika</p>
+              <h3 class="text-xl font-bold text-blue-900 my-1">Cami İnşaatı</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s...
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-2">
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>%18</span>
+                </div>
+                <div class="w-full bg-gray-200 h-1 rounded">
+                  <div class="bg-orange-400 h-1 rounded w-[18%]"></div>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-600 mb-4">
+                1568 kişi bu projeyi destekledi.
+              </p>
+
+              <button
+                class="bg-white text-blue-700 border border-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded transition"
+              >
+                DESTEK OL
+              </button>
+            </div>
+            <!-- Add more cards as needed -->
+            <div
+              class="bg-white rounded-xl shadow-lg p-6 w-[300px] flex-shrink-0"
+            >
+              <p class="text-sm text-yellow-500 font-semibold">Afrika</p>
+              <h3 class="text-xl font-bold text-blue-900 my-1">Cami İnşaatı</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s...
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-2">
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>%18</span>
+                </div>
+                <div class="w-full bg-gray-200 h-1 rounded">
+                  <div class="bg-orange-400 h-1 rounded w-[18%]"></div>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-600 mb-4">
+                1568 kişi bu projeyi destekledi.
+              </p>
+
+              <button
+                class="bg-white text-blue-700 border border-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded transition"
+              >
+                DESTEK OL
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div
+            class="flex items-center justify-center md:justify-start gap-4 mt-6"
+          >
+            <button
+              id="prevBtn"
+              class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-[#003E92]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <div class="flex items-center gap-2">
+              <span
+                class="dot h-1 w-10 bg-[#003E92] rounded-full transition-all duration-300 cursor-pointer"
+              ></span>
+              <span
+                class="dot h-1 w-6 bg-[#6b91bc] rounded-full transition-all duration-300 cursor-pointer"
+              ></span>
+              <span
+                class="dot h-1 w-6 bg-[#6b91bc] rounded-full transition-all duration-300 cursor-pointer"
+              ></span>
+            </div>
+
+            <button
+              id="nextBtn"
+              class="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-[#003E92]"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- four box section -->
+      <section class="bg-[var(--color-primary)] py-10 px-4">
+        <div class="text-white max-w-[1400px] mx-auto">
+          <!-- Section Heading -->
+          <h3
+            class="text-center text-[var(--color-secondary)] text-lg md:text-xl"
+          >
+            Eğitim
+          </h3>
+          <h2 class="text-center font-bold text-2xl md:text-4xl mb-8 md:mb-10">
+            Projelerimiz
+          </h2>
+
+          <!-- Responsive Card Grid -->
+          <div
+            class="grid gap-6 md:gap-10 lg:gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center"
+          >
+            <!-- Card -->
+            <div
+              class="border border-[#4779CC] rounded-xl flex flex-col gap-4 items-center p-5 w-full max-w-xs bg-opacity-5"
+            >
+              <img
+                class="w-32 md:w-48"
+                src="img/circle1.png"
+                alt="Robotik Kodlama"
+              />
+              <div class="text-center">
+                <p class="font-bold text-[var(--color-secondary)]">
+                  Robotik Kodlama
+                </p>
+                <p>Uluslararası Etkinliğe Sahip Robotik Kodlama Eğitimi</p>
+              </div>
+              <button
+                class="border rounded-lg p-2 border-white w-48 hover:bg-white hover:text-[var(--color-primary)] transition"
+              >
+                Detaylı BİLGİ
+              </button>
+            </div>
+
+            <!-- Repeat the card 3 more times -->
+            <div
+              class="border border-[#4779CC] rounded-xl flex flex-col gap-4 items-center p-5 w-full max-w-xs bg-opacity-5"
+            >
+              <img
+                class="w-32 md:w-48"
+                src="img/circle1.png"
+                alt="Robotik Kodlama"
+              />
+              <div class="text-center">
+                <p class="font-bold text-[var(--color-secondary)]">
+                  Robotik Kodlama
+                </p>
+                <p>Uluslararası Etkinliğe Sahip Robotik Kodlama Eğitimi</p>
+              </div>
+              <button
+                class="border rounded-lg p-2 border-white w-48 hover:bg-white hover:text-[var(--color-primary)] transition"
+              >
+                Detaylı BİLGİ
+              </button>
+            </div>
+
+            <div
+              class="border border-[#4779CC] rounded-xl flex flex-col gap-4 items-center p-5 w-full max-w-xs bg-opacity-5"
+            >
+              <img
+                class="w-32 md:w-48"
+                src="img/circle1.png"
+                alt="Robotik Kodlama"
+              />
+              <div class="text-center">
+                <p class="font-bold text-[var(--color-secondary)]">
+                  Robotik Kodlama
+                </p>
+                <p>Uluslararası Etkinliğe Sahip Robotik Kodlama Eğitimi</p>
+              </div>
+              <button
+                class="border rounded-lg p-2 border-white w-48 hover:bg-white hover:text-[var(--color-primary)] transition"
+              >
+                Detaylı BİLGİ
+              </button>
+            </div>
+
+            <div
+              class="border border-[#4779CC] rounded-xl flex flex-col gap-4 items-center p-5 w-full max-w-xs bg-opacity-5"
+            >
+              <img
+                class="w-32 md:w-48"
+                src="img/circle1.png"
+                alt="Robotik Kodlama"
+              />
+              <div class="text-center">
+                <p class="font-bold text-[var(--color-secondary)]">
+                  Robotik Kodlama
+                </p>
+                <p>Uluslararası Etkinliğe Sahip Robotik Kodlama Eğitimi</p>
+              </div>
+              <button
+                class="border rounded-lg p-2 border-white w-48 hover:bg-white hover:text-[var(--color-primary)] transition"
+              >
+                Detaylı BİLGİ
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 cards section again -->
+      <section class="py-10 px-4 bg-white">
+        <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card -->
+          <div
+            class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col"
+          >
+            <img src="img/card11.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-5 flex flex-col gap-2">
+              <p class="font-semibold text-lg text-gray-800">
+                Hazreti Osman Radıyallahü Anh Su Kuyusu Açıldı
+              </p>
+              <p class="text-sm text-gray-600">
+                İhlas Vakfı, Afrika’nın su sıkıntısı çeken ülkelerinden Sudan’da
+                hayırseverlerin katkıları ile yaptırılan Hazreti Osman
+                Radıyallahü Anh Su kuyusunu açarak bölge halkının hizmetine
+                sundu
+              </p>
+              <p class="text-xs text-gray-500 mt-auto">20.12.2021</p>
+            </div>
+          </div>
+
+          <!-- Repeat -->
+          <div
+            class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col"
+          >
+            <img src="img/card11.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-5 flex flex-col gap-2">
+              <p class="font-semibold text-lg text-gray-800">
+                Hazreti Osman Radıyallahü Anh Su Kuyusu Açıldı
+              </p>
+              <p class="text-sm text-gray-600">
+                İhlas Vakfı, Afrika’nın su sıkıntısı çeken ülkelerinden Sudan’da
+                hayırseverlerin katkıları ile yaptırılan Hazreti Osman
+                Radıyallahü Anh Su kuyusunu açarak bölge halkının hizmetine
+                sundu
+              </p>
+              <p class="text-xs text-gray-500 mt-auto">20.12.2021</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col"
+          >
+            <img src="img/card11.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-5 flex flex-col gap-2">
+              <p class="font-semibold text-lg text-gray-800">
+                Hazreti Osman Radıyallahü Anh Su Kuyusu Açıldı
+              </p>
+              <p class="text-sm text-gray-600">
+                İhlas Vakfı, Afrika’nın su sıkıntısı çeken ülkelerinden Sudan’da
+                hayırseverlerin katkıları ile yaptırılan Hazreti Osman
+                Radıyallahü Anh Su kuyusunu açarak bölge halkının hizmetine
+                sundu
+              </p>
+              <p class="text-xs text-gray-500 mt-auto">20.12.2021</p>
+            </div>
+          </div>
+          <button class="p-3 border border-[#A8BEE2] rounded-xl">
+            TÜM HABERLERİ GÖR
+          </button>
+        </div>
+      </section>
+
+      <!-- blurry image card section -->
+      <section class="py-10 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Heading -->
+          <div class="text-center mb-10">
+            <p class="text-lg text-blue-600 font-medium">Yardım</p>
+            <p class="text-3xl font-bold text-gray-800">Kampanyalarımız</p>
+          </div>
+
+          <!-- Campaign Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="img/cow.png"
+                alt="Cow"
+                class="w-full h-60 object-cover"
+              />
+
+              <!-- Overlay top info -->
+              <div
+                class="absolute bottom-16 left-0 w-full bg-black/50 text-white px-4 py-2"
+              >
+                <p class="text-sm font-semibold">Vacip Kurban</p>
+                <p class="text-xs">Yurtdışı</p>
+              </div>
+
+              <!-- Bottom Label -->
+              <div
+                class="absolute bottom-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-white"
+              >
+                <p class="text-sm font-medium text-gray-800">Kurban</p>
+                <img src="img/ico1.png" alt="icon" class="w-6 h-6" />
+              </div>
+            </div>
+
+            <!-- Duplicate Cards -->
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="img/cow.png"
+                alt="Cow"
+                class="w-full h-60 object-cover"
+              />
+              <div
+                class="absolute bottom-16 left-0 w-full bg-black/50 text-white px-4 py-2"
+              >
+                <p class="text-sm font-semibold">Vacip Kurban</p>
+                <p class="text-xs">Yurtdışı</p>
+              </div>
+              <div
+                class="absolute bottom-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-white"
+              >
+                <p class="text-sm font-medium text-gray-800">Kurban</p>
+                <img src="img/ico1.png" alt="icon" class="w-6 h-6" />
+              </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="img/cow.png"
+                alt="Cow"
+                class="w-full h-60 object-cover"
+              />
+              <div
+                class="absolute bottom-16 left-0 w-full bg-black/50 text-white px-4 py-2"
+              >
+                <p class="text-sm font-semibold">Vacip Kurban</p>
+                <p class="text-xs">Yurtdışı</p>
+              </div>
+              <div
+                class="absolute bottom-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-white"
+              >
+                <p class="text-sm font-medium text-gray-800">Kurban</p>
+                <img src="img/ico1.png" alt="icon" class="w-6 h-6" />
+              </div>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src="img/cow.png"
+                alt="Cow"
+                class="w-full h-60 object-cover"
+              />
+              <div
+                class="absolute bottom-16 left-0 w-full bg-white/30 backdrop-blur-sm text-white px-4 py-2"
+              >
+                <p class="text-sm font-semibold">Vacip Kurban</p>
+                <p class="text-xs">Yurtdışı</p>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full flex items-center justify-between px-4 py-2 bg-white"
+              >
+                <p class="text-sm font-medium text-gray-800">Kurban</p>
+                <img src="img/ico1.png" alt="icon" class="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- last section -->
+      <section class="py-10 bg-gray-100">
+        <div
+          class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6"
+        >
+          <!-- Card 1 -->
+          <div class="relative overflow-hidden rounded-lg shadow-md">
+            <img
+              src="img/bottomimg(2).png"
+              alt="Gıda Bankacılığı"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 flex flex-col justify-end p-4 text-white"
+            >
+              <p class="text-lg font-semibold">Gıda</p>
+              <p class="text-sm mb-4">Bankacılığı</p>
+              <button
+                class="self-start bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
+              >
+                DETAYLI BİLGİ
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative overflow-hidden rounded-lg shadow-md">
+            <img
+              src="img/bottomimg(1).png"
+              alt="Gıda Bankacılığı"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 flex flex-col justify-end p-4 text-white"
+            >
+              <p class="text-lg font-semibold">Gıda</p>
+              <p class="text-sm mb-4">Bankacılığı</p>
+              <button
+                class="self-start bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
+              >
+                DETAYLI BİLGİ
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#003E92] text-white py-12">
+      <div class="max-w-[1280px] mx-auto px-4">
+        <!-- Newsletter Section -->
+        <div class="text-center mb-8">
+          <p class="text-orange-400 text-xl mb-2">Güncel Bilgilerden</p>
+          <h3 class="text-4xl mb-6">Haberdar Olun</h3>
+          <div
+            class="flex flex-col sm:flex-row gap-2 justify-center items-center max-w-lg mx-auto"
+          >
+            <input
+              type="email"
+              placeholder="Ad, Soyad"
+              class="px-4 py-2 rounded bg-transparent border border-white/30 text-white placeholder-white/70 flex-1 w-full sm:w-auto"
+            />
+            <input
+              type="email"
+              placeholder="Mail"
+              class="px-4 py-2 rounded bg-transparent border border-white/30 text-white placeholder-white/70 flex-1 w-full sm:w-auto"
+            />
+            <button
+              class="bg-[var(--color-secondary)] hover:bg-orange-600 px-6 py-2 rounded text-white font-medium transition-colors whitespace-nowrap"
+            >
+              ABONE OL
+            </button>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="flex justify-center gap-4 mt-6">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center hover:bg-white/30 transition-colors rounded-full border-white border"
+            >
+              <span class="text-sm">f</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-6 gap-8 border-t border-white/20 pt-8 border-b-2 pb-4"
+        >
+          <!-- Logo Section -->
+          <div class="lg:col-span-1">
+            <div class="">
+              <img src="img/footer_logo.svg" alt="Atlas Vakfı" class="h-28" />
+            </div>
+          </div>
+
+          <div>
+            <h3>Bağış</h3>
+            <p>Online Bağış</p>
+            <p>Güvenlik Uyarıları</p>
+            <p>Bağış Nasıl Yapılır</p>
+            <p>Banka Hesap Numaralarımız</p>
+            <p>Gayrimenkul Bağışı</p>
+          </div>
+
+          <!-- Kurumsal Section -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">KURUMSAL</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Vakfımız Hakkında</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Başkanın Mesajı</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Vakıf Kuruluş Senedi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Yönetim Kurulu</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Mütevelli Heyeti</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Vakıf Müdürleri</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Misyon Vizyon</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Faaliyetlerimiz Section -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">FAALİYETLERİMİZ</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Kız Eğitim Kampüsü</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Anaokulu Eğitimi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Biyomedikal Mühendisliği</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Sosyal Sorumluluk</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Konferanslar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Eğitim Hizmetleri</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >Sosyal Medya Yönetimi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition-colors"
+                  >İnsan Vakfı Yayınları</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- İletişim Section -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">BİZLER VAKFI GENEL MERKEZİ</h4>
+            <div class="text-sm space-y-2">
+              <p>Çankaya Mahallesi Mah. Fatih Cad. Naci Kasım Kıraathanesi</p>
+              <p>C Sitesi No: 1A Yenimahalle Başkenttepe Bartınlı</p>
+              <p>Merkez Yenimahalle Başkent 06374 Nallıhan/06 371</p>
+              <div class="flex items-center gap-2 mt-4">
+                <span class="text-orange-400">📞</span>
+                <span>+90 212 61 49 00</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-orange-400">✉</span>
+                <span>bilgi@atlasvakfi.org.tr</span>
+              </div>
+              <div
+                class="bg-green-600 rounded-lg p-3 mt-4 flex items-center gap-2"
+              >
+                <span class="text-2xl">💬</span>
+                <div>
+                  <p class="font-bold">WHATSAPP</p>
+                  <p class="text-sm">Destek Hattı</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bağış Section -->
+          <div>
+            <div class="bg-orange-500 rounded-lg p-6 text-center">
+              <h4 class="font-bold text-2xl mb-2">BAĞIŞ</h4>
+              <div class="text-3xl font-bold">8350</div>
+              <div class="text-lg">10 TL</div>
+              <div class="text-sm mt-2 opacity-90">
+                <p>Sadece</p>
+                <p>Turkcell</p>
+                <p>Vodafone</p>
+              </div>
+              <div class="text-xs mt-4 opacity-80">
+                <p>Bağış: BAĞIŞ" yazıp "8350"ye Gönder</p>
+                <p>Gönderdiğiniz Bağışlarınızın Hesabı</p>
+                <p>Gönderdiğiniz Bağış Hesabı</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between mt-5">
+          <div class="text-sm text-[#4779CC]">
+            <p>
+              <span class="font-semibold text-white">İhlas Vakfı</span> ©
+              Copyright 2021. Tüm Hakları Saklıdır.
+            </p>
+            <p class="mt-2">
+              İhlas Vakfı, 5520 sayılı Kanun ve 2008/14232 sayılı Bakanlar
+              Kurulu Kararı ile Vergi Muafiyetine Hak Kazanmıştır.
+            </p>
+          </div>
+          <div>
+            <p>Designed By</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle functionality with smooth animations
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuLines = mobileMenuBtn.querySelectorAll("span");
+      const menuItems = mobileMenu.querySelectorAll("a, .flex.flex-col");
+      let isMenuOpen = false;
+
+      function openMenu() {
+        isMenuOpen = true;
+
+        // Animate menu container
+        mobileMenu.style.maxHeight = "500px";
+        mobileMenu.style.opacity = "1";
+
+        // Animate menu items with staggered effect
+        setTimeout(() => {
+          menuItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.style.transform = "translateY(0)";
+              item.style.opacity = "1";
+            }, index * 100);
+          });
+        }, 100);
+
+        // Transform hamburger to X
+        menuLines[0].style.transform = "rotate(45deg) translateY(6px)";
+        menuLines[1].style.opacity = "0";
+        menuLines[2].style.transform = "rotate(-45deg) translateY(-6px)";
+      }
+
+      function closeMenu() {
+        isMenuOpen = false;
+
+        // Reset menu items
+        menuItems.forEach((item) => {
+          item.style.transform = "translateY(8px)";
+          item.style.opacity = "0";
+        });
+
+        // Animate menu container
+        setTimeout(() => {
+          mobileMenu.style.maxHeight = "0";
+          mobileMenu.style.opacity = "0";
+        }, 150);
+
+        // Reset hamburger icon
+        menuLines[0].style.transform = "rotate(0deg) translateY(0px)";
+        menuLines[1].style.opacity = "1";
+        menuLines[2].style.transform = "rotate(0deg) translateY(0px)";
+      }
+
+      mobileMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (isMenuOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenuBtn.contains(e.target) &&
+          !mobileMenu.contains(e.target) &&
+          isMenuOpen
+        ) {
+          closeMenu();
+        }
+      });
+
+      // Close menu when clicking on menu links (for better UX)
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+          setTimeout(() => closeMenu(), 200);
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768 && isMenuOpen) {
+          closeMenu();
+        }
+      });
+    </script>
+    <script>
+      const carousel = document.getElementById("carousel");
+      const dots = document.querySelectorAll(".dot");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex = 0;
+      const totalSlides = carousel.children.length;
+
+      function updateCarousel(index) {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+
+        dots.forEach((dot, i) => {
+          dot.classList.remove("w-10", "bg-[#003E92]");
+          dot.classList.add("w-6", "bg-[#6b91bc]");
+          if (i === index) {
+            dot.classList.add("w-10", "bg-[#003E92]");
+            dot.classList.remove("w-6", "bg-[#6b91bc]");
+          }
+        });
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel(currentIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel(currentIndex);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateCarousel(currentIndex);
+        });
+      });
+
+      updateCarousel(currentIndex); // Initial state
+    </script>
+  </body>
+</html>
