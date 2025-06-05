@@ -136,7 +136,7 @@
 
       <!-- Desktop Logo -->
       <div
-        class="absolute -top-2 left-[50%] -translate-x-[50%] bg-white rounded-xl p-4 pt-7 hidden lg:block"
+        class="absolute -top-2 left-[50%] -translate-x-[50%] bg-white rounded-xl p-4 pt-7 hidden lg:block shadow-lg"
       >
         <img src="img/logo.svg" alt="Logo" />
       </div>
@@ -148,18 +148,44 @@
     </nav>
 
     <main>
-      <section>
-        <div class="flex flex-col gap-2">
-          <div><img src="img/blog (1).png" alt=""></div>
-          <div class="flex gap-2">
-            <img src="img/blog (2).png" alt="">
-            <img src="img/blog (3).png" alt="">
-            <img src="img/blog (4).png" alt="">
-            
-          </div>
-        </div>
-        <div></div>
-      </section>
+      <section class="bg-white py-10 px-4 md:px-16 mx-auto max-w-[1280px] mt-10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <!-- Image Gallery -->
+    <div class="space-y-4">
+      <div class="w-full">
+        <img src="img/blog (3).png" alt="Su Kuyusu" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <img src="img/blog (4).png" alt="Small 1" class="rounded-md shadow w-full h-24 object-cover" />
+        <img src="img/blog (2).png" alt="Small 2" class="rounded-md shadow w-full h-24 object-cover" />
+        <img src="img/blog (1).png" alt="Small 3" class="rounded-md shadow w-full h-24 object-cover" />
+      </div>
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-gray-800 space-y-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-800">Hazret-I Âişe-I Sıddıka Su Kuyusu Temel Atma</h2>
+      <p>
+        Şimdi ise aynı heyecan ve gayret ile Hazret-i Hadice-tül Kübra Su Kuyusunun bağış kampanyasını başlatıyoruz.
+        Web sitemiz üzerinden bağışınızı kredi kartı veya havale ile ulaştırabilirsiniz. Nice su kuyularına vesile olmak için ayrıca sosyal medya hesaplarımızı ziyaret edebilir, kampanyalarımızı sosyal medya hesaplarınızdan paylaşabilirsiniz.
+      </p>
+      <div>
+        <h3 class="font-semibold italic text-gray-600">SU KUYUSU AÇARKEN DİKKAT ETTİĞİMİZ HUSUSLAR:</h3>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-700">
+          <li>En doğru ve En çok ihtiyaç olan yerde su kuyusunun açılması</li>
+          <li>Bağışınız, kuruşuna kadar su kuyusuna harcanıyor</li>
+          <li>Su kuyusu merkezinde cami, medrese, yetimhane inşaları ile yaşam alanı kuruluyor</li>
+          <li>Derin su kuyuları ile ana su damarından acı olmayan, tatlı ve bereketli su</li>
+          <li>En hızlı bir şekilde 60 günde su kuyusunun açılması</li>
+          <li>En şeffaf süreç, video ve resimlerin gönderilmesi</li>
+          <li>Uzman personelimizle periyodik su kuyusunun denetimi ve bakımları</li>
+          <li>Uzun yıllar boyunca hizmet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section>
         <section class="py-10 px-4 bg-white text-center">
           <p class="text-2xl text-[var(--color-primary)] text-start max-w-6xl mx-auto mb-5">Diğer Haberler</p>
