@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body>
-        <nav class="bg-[var(--color-primary)] text-white relative">
+        <nav class="bg-[var(--color-primary)] text-white relative z-50">
             <div
                 class="hidden lg:flex justify-between border-b-1 border-[#4779CC] max-w-[1400px] mx-auto"
             >
@@ -188,15 +188,15 @@
 
         <main class="">
             <section
-                class="bg-[url('/img/herobg.png')] bg-cover bg-no-repeat px-4 py-8"
+                class="bg-[url('./img/herobg.png')] bg-no-repeat bg-center py-10 md:py-10 relative"
             >
                 <div
-                    class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between"
+                    class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between"
                 >
                     <!-- Left Section -->
                     <div class="text-center md:text-left md:w-1/2 space-y-4">
                         <h2
-                            class="text-xl md:text-5xl text-[#f49d1e] font-semibold"
+                            class="text-xl md:text-5xl text-[#f49d1e] font-medium -mb-1"
                         >
                             Damlaya damlaya
                         </h2>
@@ -206,7 +206,7 @@
                             GELECEK OLUR
                         </h1>
                         <button
-                            class="border border-[#003E92] text-[#003E92] px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#003E92] hover:text-white transition"
+                            class="border border-[#4779CC] text-[#4779CC] p-4 rounded-lg text-sm font-medium hover:bg-[#003E92] hover:text-white transition hover:-translate-y-2 hover:drop-shadow-2xl"
                         >
                             DETAYLI BİLGİ
                         </button>
@@ -272,24 +272,24 @@
                         class="relative mt-8 md:mt-0 md:w-1/2 flex justify-center"
                     >
                         <div
-                            class="relative w-[300px] h-[280px] md:w-[600px] md:h-[580px] overflow-hidden"
+                            class="relative w-[300px] h-[280px] md:w-[620px] md:h-[580px] overflow-hidden"
                         >
                             <div
                                 id="carousel"
                                 class="flex w-full h-full transition-transform duration-500"
                             >
                                 <img
-                                    src="/img/hero.png"
+                                    src="./img/hero.png"
                                     alt="Hero Slide"
                                     class="w-full h-full object-cover flex-shrink-0"
                                 />
                                 <img
-                                    src="/img/hero.png"
+                                    src="./img/hero.png"
                                     alt="Hero Slide 2"
                                     class="w-full h-full object-cover flex-shrink-0"
                                 />
                                 <img
-                                    src="/img/hero.png"
+                                    src="./img/hero.png"
                                     alt="Hero Slide 3"
                                     class="w-full h-full object-cover flex-shrink-0"
                                 />
@@ -297,15 +297,29 @@
                         </div>
 
                         <!-- Bağış Yap Button -->
-                        <button
-                            class="absolute bottom-14 left-10 md:bottom-30 md:left-24 transform -translate-x-1/2 px-4 py-2 bg-[#f49d1e] text-white text-xs font-medium rounded shadow hover:bg-[#e38c0a] z-20"
+                        <a
+                            href="2.html"
+                            class="absolute bottom-14 left-10 md:bottom-30 md:left-24 text-white text-xs font-medium -translate-x-1/2 flex gap-2 justify-center items-center bg-[var(--color-secondary)] px-3 py-2 rounded-md border-opacity-50 hover:-translate-y-1 hover:drop-shadow-2xl transition-all"
                         >
-                            BAĞIŞ YAP
-                        </button>
+                            <img
+                                src="img/heart.svg"
+                                class="w-7 border-r pr-2 border-[#4779CC] border-opacity-30 font-medium"
+                                alt=""
+                            />
+                            <p class="text-sm">BAĞIŞ YAP</p>
+                        </a>
                     </div>
                 </div>
+                <!-- Progress Bar -->
+                <div
+                    class="absolute bottom-0 left-0 w-full h-1 bg-gray-300 overflow-hidden"
+                >
+                    <div
+                        id="progressBar"
+                        class="h-full bg-[#003E92] w-0 transition-all duration-300"
+                    ></div>
+                </div>
             </section>
-
             <!-- circular image section -->
             <section>
                 <div class="bg-gray-100 py-10 px-4 md:px-16">
@@ -1592,6 +1606,52 @@
             });
 
             updateCarousel(currentIndex); // Initial state
+
+            const slides = carousel.children;
+
+            const progressBar = document.getElementById("progressBar");
+
+            function goToSlide(index) {
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel(currentIndex);
+                goToSlide(currentIndex);
+            }
+
+            function startProgress() {
+                progressBar.style.transition = "none";
+                progressBar.style.width = "0%";
+
+                // trigger reflow
+                void progressBar.offsetWidth;
+
+                progressBar.style.transition = "width 3s linear";
+                progressBar.style.width = "100%";
+
+                setTimeout(() => {
+                    nextSlide();
+                    startProgress();
+                }, 3000);
+            }
+
+            // Start autoplay
+            startProgress();
+
+            // Manual navigation support
+            document.getElementById("prevBtn").addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                goToSlide(currentIndex);
+                startProgress();
+            });
+
+            document.getElementById("nextBtn").addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                goToSlide(currentIndex);
+                startProgress();
+            });
         </script>
     </body>
 </html>

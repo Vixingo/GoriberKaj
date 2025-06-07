@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #003E92;
-  --color-secondary: #FF9D00;
+    --color-primary: #003e92;
+    --color-secondary: #ff9d00;
+    --default-font-family: "SF Pro", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+    font-family: SF Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("otf"),
+        url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("otf"),
+        url("/fonts/SFPRODISPLAYBOLD.OTF") format("otf");
+}
+@font-face {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/HelveticaNeueBold.otf") format("otf"),
+        url("/fonts/HelveticaNeueHeavy.otf") format("otf"),
+        url("/fonts/HelveticaNeueLight.otf") format("otf"),
+        url("/fonts/HelveticaNeueMedium.otf") format("otf"),
+        url("/fonts/HelveticaNeueRegular.otf") format("otf"),
+        url("/fonts/HelveticaNeueThin.otf") format("otf"),
+        url("/fonts/HelveticaNeueUltraLight.otf") format("otf");
 }
