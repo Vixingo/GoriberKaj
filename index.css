@@ -30,3 +30,23 @@
         url("/fonts/HelveticaNeueThin.otf") format("otf"),
         url("/fonts/HelveticaNeueUltraLight.otf") format("otf");
 }
+
+.category-item {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-item .category-icon {
+  transition: color 0.3s ease;
+}
+
+.category-item.selected {
+  color: var(--color-secondary);
+}
+
+.category-item.selected .category-icon {
+  color: var(--color-secondary);
+}
+
+.category-item:hover {
+  transform: scale(1.1);
+}
